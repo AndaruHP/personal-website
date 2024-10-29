@@ -9,6 +9,8 @@ class Category extends Model
 {
     protected $fillable = ['name', 'slug'];
 
+    protected static ?string $recordTitleAttribute = 'name';
+
     public function posts()
     {
         return $this->hasMany(Post::class);

@@ -13,6 +13,8 @@ class Post extends Model implements HasMedia
 
     protected $fillable = ['title', 'slug', 'content', 'category_id', 'is_published'];
 
+    protected static ?string $recordTitleAttribute = 'title';
+
     protected $casts = [
         'is_published' => 'boolean'
     ];
