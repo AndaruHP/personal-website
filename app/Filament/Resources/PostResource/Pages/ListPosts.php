@@ -11,6 +11,13 @@ class ListPosts extends ListRecords
 {
     protected static string $resource = PostResource::class;
 
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\CreateAction::make(),
+        ];
+    }
+
     protected function getHeaderWidgets(): array
     {
         return [
