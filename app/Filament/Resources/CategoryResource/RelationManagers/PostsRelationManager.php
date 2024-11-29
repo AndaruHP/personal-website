@@ -52,7 +52,7 @@ class PostsRelationManager extends RelationManager
                 TextColumn::make('title')->limit(50)->sortable(),
                 TextColumn::make('slug')->limit(50),
                 BooleanColumn::make('is_published')->label('Published'),
-                // SpatieMediaLibraryImageColumn::make('thumbnail')->collection('posts'),
+                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('posts'),
             ])
             ->filters([
                 //

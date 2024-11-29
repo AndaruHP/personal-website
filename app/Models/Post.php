@@ -23,4 +23,14 @@ class Post extends Model implements HasMedia
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('posts')->singleFile();
+    }
+
+    public function getFormattedDateAttribute()
+    {
+        return $this->created_at->format('d M Y');
+    }
 }
